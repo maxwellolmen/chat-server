@@ -1,0 +1,10 @@
+package dev.Maxxwell.chat.server;
+
+public class Serve extends Thread {
+	private PrintWriter out;
+	private BufferedReader in;
+	
+	public Serve(PrintWriter out, BufferedReader in) {
+		
+	}
+}

@@ -30,7 +30,6 @@ public class Display extends JFrame {
 			}
 		});
 		cp.add(stop);
-		Accept a = new Accept();
-		a.start();
+		
 	}
 }

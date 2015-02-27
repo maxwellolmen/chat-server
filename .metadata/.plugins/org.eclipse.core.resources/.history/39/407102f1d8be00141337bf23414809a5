@@ -1,0 +1,7 @@
+package dev.Maxxwell.chat.server;
+
+public class Serve extends Thread {
+	public Serve() {
+		
+	}
+}
