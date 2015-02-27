@@ -1,0 +1,14 @@
+package dev.Maxxwell.chat.server;
+
+import javax.swing.JFrame;
+
+public class Display extends JFrame {
+	private static final long serialVersionUID = 1L;
+
+	public Display() {
+		setSize(500, 500);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+}

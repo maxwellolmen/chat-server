@@ -1,0 +1,20 @@
+package dev.Maxxwell.chat.server;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import javax.swing.JOptionPane;
+
+public class Server extends Thread {
+	public void run() {
+		try {
+			ServerSocket ss = new ServerSocket(7403);
+			Socket s = ss.accept();
+			PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "An error occured while trying to start the server.");
+		}
+	}
+}

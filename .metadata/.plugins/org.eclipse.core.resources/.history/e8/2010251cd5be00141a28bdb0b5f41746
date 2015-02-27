@@ -1,0 +1,22 @@
+package dev.Maxxwell.chat.server;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
+public class Display extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
+	private JTextArea jta = new JTextArea(10, 30);
+	public Display(float version) {
+		super("Chatting Server v" + version);
+		setSize(500, 500);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(new FlowLayout());
+		setVisible(true);
+		Container cp = getContentPane();
+	}
+}
