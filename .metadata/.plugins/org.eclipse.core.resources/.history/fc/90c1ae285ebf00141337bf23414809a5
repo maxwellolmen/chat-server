@@ -18,7 +18,7 @@ public class Display extends JFrame {
 	private JButton stop = new JButton("Stop Server");
 	public Display(float version) {
 		super("Chatting Server v" + version);
-		setSize(500, 360);
+		setSize(500, 450);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new FlowLayout());
