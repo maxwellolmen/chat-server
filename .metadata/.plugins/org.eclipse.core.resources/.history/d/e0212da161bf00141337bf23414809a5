@@ -1,9 +1,6 @@
 package dev.Maxxwell.chat.client;
 
-import java.awt.Container;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -24,26 +21,5 @@ public class Display extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new FlowLayout());
 		setVisible(true);
-		Container cp = getContentPane();
-		jtao.setEditable(false);
-		cp.add(jtao);
-		cp.add(jtai);
-		send.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		cp.add(send);
-		address.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		cp.add(address);
-		stop.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
 	}
 }

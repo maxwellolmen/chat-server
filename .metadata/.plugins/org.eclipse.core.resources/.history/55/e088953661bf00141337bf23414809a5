@@ -16,7 +16,7 @@ public class Display extends JFrame {
 	
 	private JTextArea jta = new JTextArea(20, 30);
 	private JButton stop = new JButton("Stop Server");
-	public Display(String version) {
+	public Display(float version) {
 		super("Chatting Server v" + version);
 		setSize(500, 360);
 		setResizable(false);

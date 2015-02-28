@@ -32,18 +32,6 @@ public class Display extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 			}
-		});
-		cp.add(send);
-		address.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		cp.add(address);
-		stop.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
+		})
 	}
 }

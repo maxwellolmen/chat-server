@@ -1,4 +1,4 @@
-package dev.Maxxwell.chat.client;
+package dev.Maxxwell.chat.server;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -10,15 +10,14 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class Display extends JFrame {
+	public static Accept a = new Accept();
+	
 	private static final long serialVersionUID = 1L;
 	
 	private JTextArea jtao = new JTextArea(20, 30);
-	private JTextArea jtai = new JTextArea(1, 30);
-	private JButton send = new JButton("Send");
-	private JButton address = new JButton("Change Address");
-	private JButton stop = new JButton("Stop Client");
-	public Display(String version) {
-		super("Chatting Client v" + version);
+	private JButton stop = new JButton("Stop Server");
+	public Display(float version) {
+		super("Chatting Server v" + version);
 		setSize(500, 360);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,23 +26,20 @@ public class Display extends JFrame {
 		Container cp = getContentPane();
 		jtao.setEditable(false);
 		cp.add(jtao);
-		cp.add(jtai);
-		send.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		cp.add(send);
-		address.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		cp.add(address);
 		stop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
+		cp.add(stop);
+		a.start();
+	}
+	
+	public static Accept getAccept() {
+		return a;
+	}
+	
+	public static void addLine(String line) {
+		
 	}
 }
