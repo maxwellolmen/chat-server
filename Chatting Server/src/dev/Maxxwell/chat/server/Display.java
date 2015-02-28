@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class Display extends JFrame {
+	public static Accept a = new Accept();
+	
 	private static final long serialVersionUID = 1L;
 	
 	private JTextArea jtao = new JTextArea(10, 15);
@@ -30,7 +32,14 @@ public class Display extends JFrame {
 			}
 		});
 		cp.add(stop);
-		Accept a = new Accept();
 		a.start();
+	}
+	
+	public static Accept getAccept() {
+		return a;
+	}
+	
+	public static void addLine(String line) {
+		
 	}
 }

@@ -1,0 +1,26 @@
+package dev.Maxxwell.chat.server;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.swing.JOptionPane;
+
+public class Serve extends Thread {
+	private PrintWriter out;
+	private BufferedReader in;
+	
+	public Serve(PrintWriter out, BufferedReader in) {
+		this.out = out;
+		this.in = in;
+	}
+	
+	public void run() {
+		try {
+			String line = in.readLine();
+			Display.getAccept().getClients();
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "An error occured while communicating with a client.");
+		}
+	}
+}
